@@ -1,7 +1,7 @@
 // Service worker: makes the game installable and playable offline.
 // The whole game is one big index.html, so we cache the app shell and serve it
 // cache-first. Leaderboard requests (workers.dev) always go to the network.
-const CACHE = 'pz-merkaz-v1';
+const CACHE = 'pz-merkaz-v3';
 const SHELL = [
   './',
   './index.html',
@@ -32,13 +32,19 @@ self.addEventListener('fetch', (e) => {
   let url;
   try { url = new URL(e.request.url); } catch { return; }
   if (url.hostname.includes('workers.dev')) return;          // leaderboard: always live network
+  if (url.origin !== location.origin) return;                // let cross-origin go straight to network
+  // stale-while-revalidate: serve cache instantly, refresh it in the background so
+  // the NEXT launch always has the latest deploy (updates never get stuck)
   e.respondWith(
-    caches.match(e.request).then((hit) => hit || fetch(e.request).then((resp) => {
-      if (url.origin === location.origin && resp && resp.status === 200) {
-        const clone = resp.clone();
-        caches.open(CACHE).then((c) => c.put(e.request, clone));
-      }
-      return resp;
-    }).catch(() => caches.match('./index.html')))       // offline navigation fallback
+    caches.match(e.request).then((hit) => {
+      const net = fetch(e.request).then((resp) => {
+        if (resp && resp.status === 200) {
+          const clone = resp.clone();
+          caches.open(CACHE).then((c) => c.put(e.request, clone));
+        }
+        return resp;
+      }).catch(() => hit || caches.match('./index.html'));
+      return hit || net;
+    })
   );
 });
