@@ -1,0 +1,19 @@
+{
+  "name": "פסגת זאב מרכז — משחק נהיגה",
+  "short_name": "פסגת זאב",
+  "description": "משחק נהיגה והליכה בשכונת פסגת זאב מרכז: מירוץ, משימות ועולם חי — בלי אלימות.",
+  "lang": "he",
+  "dir": "rtl",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "landscape",
+  "background_color": "#0a0e14",
+  "theme_color": "#0a0e14",
+  "categories": ["games", "kids"],
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "icon-512-maskable.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
