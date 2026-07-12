@@ -1,7 +1,7 @@
 // Service worker: makes the game installable and playable offline.
 // The whole game is one big index.html, so we cache the app shell and serve it
 // cache-first. Leaderboard requests (workers.dev) always go to the network.
-const CACHE = 'pz-merkaz-v6';
+const CACHE = 'pz-merkaz-v7';
 const SHELL = [
   './',
   './index.html',
