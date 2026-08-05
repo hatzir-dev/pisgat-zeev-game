@@ -1,7 +1,7 @@
 // Service worker: makes the game installable and playable offline.
 // The whole game is one big index.html, so we cache the app shell and serve it
 // cache-first. Leaderboard requests (workers.dev) always go to the network.
-const CACHE = 'pz-merkaz-v98';
+const CACHE = 'pz-merkaz-v99';
 const SHELL = [
   './',
   './index.html',
@@ -11,10 +11,17 @@ const SHELL = [
   './icon-512-maskable.png',
 ];
 
+// ⚠️ c.add משתמש במטמון ה-HTTP, ולכן בזמן שה-CDN עוד מפיץ גרסה חדשה אפשר
+// לשמור גוף **ישן** תחת שם המטמון החדש — נצפה בפועל: הדף המשיך להגיש גרף
+// כבישים ישן אחרי פריסה. fetch עם cache:'reload' עוקף את המטמון ומקטין
+// את החלון הזה. (ה-stale-while-revalidate למטה מרפא ממילא בטעינה הבאה.)
 self.addEventListener('install', (e) => {
   e.waitUntil(
     caches.open(CACHE)
-      .then((c) => Promise.allSettled(SHELL.map((u) => c.add(u))))
+      .then((c) => Promise.allSettled(SHELL.map(async (u) => {
+        const resp = await fetch(new Request(u, { cache: 'reload' }));
+        if (resp && resp.status === 200) await c.put(u, resp);
+      })))
       .then(() => self.skipWaiting())
   );
 });
