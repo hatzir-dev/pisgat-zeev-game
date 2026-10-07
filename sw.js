@@ -1,7 +1,7 @@
 // Service worker: makes the game installable and playable offline.
-// The whole game is one big index.html, so we cache the app shell and serve it
-// cache-first. Leaderboard requests (workers.dev) always go to the network.
-const CACHE = 'pz-merkaz-v139';
+// Navigation checks for the latest app; cached assets keep offline play quick.
+// Leaderboard requests (workers.dev) always go to the network.
+const CACHE = 'pz-merkaz-v140';
 const SHELL = [
   './',
   './index.html',
@@ -29,7 +29,7 @@ self.addEventListener('install', (e) => {
 self.addEventListener('activate', (e) => {
   e.waitUntil(
     caches.keys()
-      .then((ks) => Promise.all(ks.filter((k) => k !== CACHE).map((k) => caches.delete(k))))
+      .then((ks) => Promise.all(ks.filter((k) => k.startsWith('pz-merkaz-') && k !== CACHE).map((k) => caches.delete(k))))
       .then(() => self.clients.claim())
   );
 });
@@ -40,18 +40,26 @@ self.addEventListener('fetch', (e) => {
   try { url = new URL(e.request.url); } catch { return; }
   if (url.hostname.includes('workers.dev')) return;          // leaderboard: always live network
   if (url.origin !== location.origin) return;                // let cross-origin go straight to network
-  // stale-while-revalidate: serve cache instantly, refresh it in the background so
-  // the NEXT launch always has the latest deploy (updates never get stuck)
-  e.respondWith(
-    caches.match(e.request).then((hit) => {
-      const net = fetch(e.request).then((resp) => {
-        if (resp && resp.status === 200) {
-          const clone = resp.clone();
-          caches.open(CACHE).then((c) => c.put(e.request, clone));
-        }
-        return resp;
-      }).catch(() => hit || caches.match('./index.html'));
-      return hit || net;
-    })
-  );
+  const navigation = e.request.mode === 'navigate';
+  const net = fetch(e.request, navigation ? {cache:'no-cache'} : undefined);
+  // Keep the worker alive until the cache write finishes, even when a cached
+  // response was returned immediately. Otherwise offline model files vanish.
+  e.waitUntil(net.then(async (resp) => {
+    if(resp && resp.status === 200){
+      const clone=resp.clone(),cache=await caches.open(CACHE);
+      await cache.put(e.request,clone);
+    }
+  }).catch(()=>{}));
+  if(navigation){
+    e.respondWith((async()=>{
+      let timer;
+      const timeout=new Promise(resolve=>{timer=setTimeout(()=>resolve(null),3000);});
+      const response=await Promise.race([net.catch(()=>null),timeout]);clearTimeout(timer);
+      if(response?.ok)return response;
+      return await caches.match(e.request)||await caches.match('./index.html')||response||new Response('המשחק אינו זמין כרגע ללא חיבור', {status:503});
+    })());
+  }else{
+    // A failed image/model request must not return index.html with status 200.
+    e.respondWith(caches.match(e.request).then(hit=>hit||net.catch(()=>new Response('',{status:503}))));
+  }
 });
