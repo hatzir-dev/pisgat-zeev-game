@@ -1,7 +1,7 @@
 // Service worker: makes the game installable and playable offline.
 // Navigation checks for the latest app; cached assets keep offline play quick.
 // Leaderboard requests (workers.dev) always go to the network.
-const CACHE = 'pz-merkaz-v145';
+const CACHE = 'pz-merkaz-v146';
 const SHELL = [
   './',
   './index.html',
