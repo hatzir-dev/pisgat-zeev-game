@@ -1,0 +1,14 @@
+{
+  "version": 147,
+  "asset": "limestone-arch-v147.glb",
+  "objects": 52,
+  "triangles": 2288,
+  "width": 5.28,
+  "height": 5.91,
+  "depth": 0.73,
+  "clearanceWidth": 4.2,
+  "artist": "original Blender procedural stonework",
+  "sourceScript": "scripts/blender/create_old_city_arch.py",
+  "bytes": 190444,
+  "sha256": "336ac3dc4326c593f1e4e47f0fb5a6f618a6dd5011a1532c76fe9ba117a68ba7"
+}

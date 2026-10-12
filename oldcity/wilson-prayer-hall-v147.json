@@ -1,0 +1,39 @@
+{
+  "version": 147,
+  "asset": "wilson-prayer-hall-v147.glb",
+  "sourceHallId": 10000010254,
+  "sourceOsmId": 499210296,
+  "localAxes": "Blender X east/Y north/Z up; Three X east/Y up/Z south",
+  "span": 13,
+  "width": 15,
+  "innerApex": 7,
+  "vertices": 7952,
+  "triangles": 12568,
+  "meshes": 11,
+  "sourceScript": "scripts/blender/create_wilson_arch.py",
+  "artist": "Original photo-informed Blender geometry",
+  "measurementSource": "https://hadashot.iaa.org.il/Report_Detail_Eng.aspx?id=25662",
+  "references": [
+    {
+      "url": "https://www.bibleplaces.com/wp-content/uploads/2021/01/Wilsons-Arch-and-prayer-area-tb091306121.jpg",
+      "author": "Todd Bolen / BiblePlaces",
+      "use": "Visual reference only; no image texture copied",
+      "inspected": "2026-10-11"
+    },
+    {
+      "url": "https://hadashot.iaa.org.il/Images//7514-4.jpg",
+      "author": "Israel Antiquities Authority",
+      "use": "Visual reference only",
+      "inspected": "2026-10-11"
+    },
+    {
+      "url": "https://hadashot.iaa.org.il/Images//2-7514-3.jpg",
+      "author": "Israel Antiquities Authority",
+      "use": "Measured section: 13m span, 7m crown above floor",
+      "inspected": "2026-10-11"
+    }
+  ],
+  "limitations": "Bounded prayer bay/entrance reconstruction; not an underground-network survey. Relative floor fitted continuously to game plaza DEM.",
+  "bytes": 912432,
+  "sha256": "052e515a26cf83d13fa451d27eb0ac4cf61530724e7757d78e2765858c082403"
+}

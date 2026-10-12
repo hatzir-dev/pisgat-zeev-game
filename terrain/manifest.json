@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "grid": {
+    "nx": 709,
+    "nz": 606,
+    "minX": -4103.330078125,
+    "minZ": -1472.7098388671875,
+    "dx": 7.9980537619005645,
+    "dz": 7.994240335898824,
+    "vertices": 430970
+  },
+  "rect": [
+    -3993.33,
+    -1362.71,
+    0.0001834653672426256,
+    0.00021623912587495755
+  ],
+  "grass": {
+    "width": 3141,
+    "height": 2665
+  },
+  "samples": {
+    "width": 341,
+    "height": 290
+  },
+  "sourceHashes": {
+    "data/map_data.json": "b90f685d7b7ace9be7ab5bec3af21e510875364e72e20cfa3f7859371e3078bf",
+    "data/elevation.json": "869e7e0143c0750c03da1caaff0675ab9c2d8806a3c300d8e25e297cc4232e98",
+    "data/muni_surfaces.json": "0414c5512eeb0bbaff309e07f643d6c6350b87f6132f5080b04e9b1dac97e76a",
+    "data/ground_albedo_meta.json": "68081ba3a0eb167e668f72b508bbdec92c9550161bc7c7c9fe9f6b516ac95698",
+    "public/ground_albedo.jpg": "3105e57b287087ecb9078e0642410a02c3ef0211db06d9da0b2e2b6b6edddd2e",
+    "src/world.js": "59520171d8638ce8fbb095592549853cf1edd650ca8704443f628ddd1435a2f3",
+    "src/groundmaps.js": "68cd667122a2089d0b80cba3006c4ac8b1500b276c6c34c36e1687681a6f5d5f",
+    "src/roadshape.mjs": "216796a27864bc02652466e276e110c3b33daeaa618b2ded9a992b70c6f8e084",
+    "src/frontagedata.js": "7d917eda921a9cac32713959af3c53aea054c4b6297cbf81cf1f8c6496cb047e",
+    "src/terrainheight.js": "a14a6ae50493abcaa5506fba6f03df88285f73e5e659bbd51468419299614e61"
+  }
+}

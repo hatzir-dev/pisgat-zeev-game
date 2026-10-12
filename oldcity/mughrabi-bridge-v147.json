@@ -1,0 +1,192 @@
+{
+  "version": 147,
+  "asset": "mughrabi-bridge-v147.glb",
+  "originalGeometry": true,
+  "sourceWayIds": [
+    44172764,
+    277508271
+  ],
+  "sourceGateId": 291836692,
+  "sourceCaptureSHA256": "60e6ccef8481c0fa20c86377a4bea41a23fc08ce0b7fd0fedc329dcb4f80ae35",
+  "origin": [
+    -1523.38,
+    79.93,
+    6531.5
+  ],
+  "plazaY": 82.39899763623248,
+  "approachY": 79.93,
+  "templeY": 94.437,
+  "width": 2.4,
+  "overallWidthWithButtresses": 3.66,
+  "sourceApproachWidth": 2.2,
+  "sourceBridgeWidth": 2.4,
+  "roofClearance": 2.65,
+  "supportPitch": 4.0,
+  "length": 118.91539405110794,
+  "approachLength": 52.96168733567417,
+  "coveredStartDistance": 52.96168733567417,
+  "coveredLength": 65.95370671543377,
+  "worldPath": [
+    {
+      "x": -1523.38,
+      "z": 6531.5,
+      "sourceH": 79.93,
+      "way": 44172764,
+      "distance": 0.0,
+      "y": 79.93
+    },
+    {
+      "x": -1523.08,
+      "z": 6524.6,
+      "sourceH": 80.24,
+      "way": 44172764,
+      "distance": 6.9065186599324475,
+      "y": 80.7725558944587
+    },
+    {
+      "x": -1522.79,
+      "z": 6517.7,
+      "sourceH": 80.31,
+      "way": 44172764,
+      "distance": 13.812610173951612,
+      "y": 81.61505967955163
+    },
+    {
+      "x": -1522.37,
+      "z": 6509.36,
+      "sourceH": 80.24,
+      "way": 44172764,
+      "distance": 22.163179016851025,
+      "y": 82.63378146213158
+    },
+    {
+      "x": -1525.78,
+      "z": 6498.7,
+      "sourceH": 80.7,
+      "way": 44172764,
+      "distance": 33.35530571377496,
+      "y": 83.9991570998938
+    },
+    {
+      "x": -1526.71,
+      "z": 6494.67,
+      "sourceH": 80.66,
+      "way": 44172764,
+      "distance": 37.49122157365389,
+      "y": 84.50371525115784
+    },
+    {
+      "x": -1526.09,
+      "z": 6489.23,
+      "sourceH": 80.26,
+      "way": 44172764,
+      "distance": 42.966438464335546,
+      "y": 85.17166049127522
+    },
+    {
+      "x": -1525.14,
+      "z": 6479.28,
+      "sourceH": 79.88,
+      "way": 44172764,
+      "distance": 52.96168733567417,
+      "y": 86.39102385910117
+    },
+    {
+      "x": -1524.6,
+      "z": 6470.39,
+      "sourceH": 80.15,
+      "way": 277508271,
+      "distance": 61.86807268552233,
+      "y": 87.47755208617593
+    },
+    {
+      "x": -1518.61,
+      "z": 6465.5,
+      "sourceH": 79.72,
+      "way": 277508271,
+      "distance": 69.60061431166334,
+      "y": 88.42087807239952
+    },
+    {
+      "x": -1512.62,
+      "z": 6460.6,
+      "sourceH": 80.15,
+      "way": 277508271,
+      "distance": 77.33948373813621,
+      "y": 89.36497601418148
+    },
+    {
+      "x": -1507.51,
+      "z": 6457.07,
+      "sourceH": 80.71,
+      "way": 277508271,
+      "distance": 83.55020028294838,
+      "y": 90.12264801816833
+    },
+    {
+      "x": -1497.24,
+      "z": 6455.13,
+      "sourceH": 81.33,
+      "way": 277508271,
+      "distance": 94.00182695060151,
+      "y": 91.39768687480685
+    },
+    {
+      "x": -1488.8,
+      "z": 6453.56,
+      "sourceH": 81.85,
+      "way": 277508271,
+      "distance": 102.58660999969483,
+      "y": 92.44498145501632
+    },
+    {
+      "x": -1486.6,
+      "z": 6464.34,
+      "sourceH": 80.25,
+      "way": 277508271,
+      "distance": 113.58880977973858,
+      "y": 93.78718709191222
+    },
+    {
+      "x": -1481.29,
+      "z": 6463.92,
+      "sourceH": 94.44,
+      "way": 277508271,
+      "distance": 118.91539405110794,
+      "y": 94.437
+    }
+  ],
+  "heightProvenance": "Source h measures ground. Deck y starts at the retained lower source-ground height and fits a continuous incline to the Temple landing; it is not surveyed bridge height. The flattened plaza level is retained as reference, not imposed on the lower entry.",
+  "references": [
+    {
+      "author": "Shaula Haitner",
+      "date": "2019-06-13",
+      "license": "CC BY 2.5",
+      "url": "https://commons.wikimedia.org/wiki/File:PikiWiki_Israel_54093_entrance_to_the_mugrabi_gate.jpg"
+    },
+    {
+      "author": "Shaula Haitner",
+      "date": "2019-06-13",
+      "license": "CC BY 2.5",
+      "url": "https://commons.wikimedia.org/wiki/File:PikiWiki_Israel_54095_entrance_to_the_mugrabi_gate.jpg"
+    },
+    {
+      "author": "Bukvoed",
+      "date": "2019-10-14",
+      "license": "CC BY 4.0",
+      "url": "https://commons.wikimedia.org/wiki/File:Jerusalem-Temple-Mount-KTM-0798.jpg"
+    },
+    {
+      "author": "Jorge Lascar",
+      "date": "2012-09-05",
+      "license": "CC BY 2.0",
+      "url": "https://commons.wikimedia.org/wiki/File:Access_to_the_Muslim_Quarter_via_the_wooden_bridge_(10805544104).jpg"
+    }
+  ],
+  "photographTextures": 0,
+  "meshes": 7,
+  "triangles": 28716,
+  "supportColumns": 72,
+  "bytes": 1557380,
+  "sha256": "71dd067ad009cb693d17f65d47a867cbced95c78320555da36050c08b7e91d14"
+}

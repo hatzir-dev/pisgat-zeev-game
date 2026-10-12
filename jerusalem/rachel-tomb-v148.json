@@ -1,0 +1,247 @@
+{
+  "version": 148,
+  "status": "ready",
+  "generator": "scripts/blender/create_rachel_tomb.py",
+  "coordinates": "glTF X east/Y up/Z south; outdoor origin is source area centroid; no runtime rotation/stretch",
+  "sourceId": 1002265723,
+  "sourceOriginWorld": {
+    "x": -4544.482772382621,
+    "z": 12770.725393835799
+  },
+  "sourcePolygon": [
+    [
+      -4536.21,
+      12776.53
+    ],
+    [
+      -4553.99,
+      12774.11
+    ],
+    [
+      -4552.75,
+      12764.92
+    ],
+    [
+      -4534.98,
+      12767.34
+    ],
+    [
+      -4536.21,
+      12776.53
+    ]
+  ],
+  "sourceGeometryStatus": "Exact retained mapped core footprint. Surrounding compound walls, towers and approach road remain separate CityRegion source geometry.",
+  "dimensionStatus": "Vertical dimensions, entrance position and prayer-room layout are photo-informed game reconstructions, not surveyed dimensions or a measured floor plan.",
+  "materialStatus": "Original compact PBR materials and generated limestone texture; reference photo pixels are not shipped",
+  "references": [
+    {
+      "publisher": "National Center for Development of Holy Places",
+      "page": "https://holy.org.il/%D7%92%D7%9C%D7%A8%D7%99%D7%94/",
+      "image": "https://holy.org.il/wp-content/uploads/2025/11/IMG-20251103-WA0058-570x532.jpg",
+      "dateEvidence": "2025-11-03 filename and 5786 event gallery",
+      "use": "Current compound wall panels, stone-faced entrance, upper metal grilles; original-photo reference only"
+    },
+    {
+      "publisher": "National Center for Development of Holy Places",
+      "page": "https://holy.org.il/%D7%92%D7%9C%D7%A8%D7%99%D7%94/",
+      "image": "https://holy.org.il/wp-content/uploads/2025/11/IMG-20251103-WA0051-570x532.jpg",
+      "dateEvidence": "2025-11-03 filename and 5786 event gallery",
+      "use": "Actual historic stone arches/piers, covered shrine, lamps and adjoining modern prayer-room ceiling"
+    },
+    {
+      "publisher": "National Center for Development of Holy Places",
+      "page": "https://holy.org.il/%D7%92%D7%9C%D7%A8%D7%99%D7%94/",
+      "image": "https://holy.org.il/wp-content/uploads/2025/12/IMG-20251215-WA0022-570x532.jpg",
+      "dateEvidence": "2025-12-15 filename and 5786 Hanukkah gallery",
+      "use": "White arched frames and brown perforated prayer-room partition"
+    },
+    {
+      "publisher": "National Center for Development of Holy Places",
+      "page": "https://holy.org.il/%D7%A9%D7%99%D7%A0%D7%95%D7%99-%D7%91%D7%94%D7%A1%D7%93%D7%A8%D7%99-%D7%AA%D7%A0%D7%95%D7%A2%D7%94-%D7%91%D7%90%D7%AA%D7%A8-%D7%A7%D7%91%D7%A8-%D7%A8%D7%97%D7%9C-%D7%90%D7%9E%D7%A0%D7%95-%D7%94%D7%97/",
+      "dateEvidence": "Works began 2025-01-26",
+      "use": "Separated pedestrian pavement, bus-stop/service-building and lighting upgrade; does not prove completion or exact final position"
+    }
+  ],
+  "assets": [
+    {
+      "kind": "core",
+      "file": "rachel-tomb-core-v148.glb",
+      "sourceId": 1002265723,
+      "sourceOriginWorld": {
+        "x": -4544.482772382621,
+        "z": 12770.725393835799
+      },
+      "anchor": "CityRegion.heightAt(sourceOriginWorld); rotation/scale already baked",
+      "triangleBudget": 15000,
+      "drawPrimitiveBudget": 7,
+      "bytes": 681820,
+      "sha256": "4d4bc01c19a803fafb52d87b3cb718ec0414d4e37cf0fc6da402243f5fab4c76",
+      "triangles": 7896,
+      "drawPrimitives": 3,
+      "height": 4.98,
+      "entranceStatus": "Illustrative east-edge midpoint adjacent to retained tunnel path; not a surveyed public doorway",
+      "roof": {
+        "kind": "flat",
+        "surfaceY": 4.8,
+        "corniceTopY": 4.98,
+        "dimensionStatus": "Photo-informed reconstruction; no measured contemporary roof height"
+      },
+      "entrance": {
+        "worldCentre": {
+          "x": -4535.594999999999,
+          "z": 12771.935000000001
+        },
+        "worldOutwardNormal": {
+          "x": 0.9911618414750538,
+          "z": 0.13265822252608458
+        },
+        "openingWidth": 2.6,
+        "archSpringY": 2.75,
+        "archRise": 1.0,
+        "thresholdTopY": 0.16,
+        "fixedBackingPlate": false,
+        "doorOwner": "BuildingInteriors automatic runtime leaf",
+        "dimensionStatus": "Photo-informed game entrance, not a surveyed doorway"
+      }
+    },
+    {
+      "kind": "interior",
+      "file": "rachel-tomb-interior-v148.glb",
+      "coordinates": "Illustrative walking layout X right/Y up/Z into room; entry at z=0",
+      "triangleBudget": 22000,
+      "drawPrimitiveBudget": 8,
+      "bytes": 495188,
+      "sha256": "4bfb606e1f851b5145b6f21482e4b49b438c35def3ad46f5eb685589e8816311",
+      "triangles": 5952,
+      "drawPrimitives": 8,
+      "layoutStatus": "Photo-observed elements arranged in an illustrative accessible layout; exact inter-room distances and modern floor plan unavailable",
+      "width": 8.8,
+      "depth": 18
+    }
+  ],
+  "interior": {
+    "width": 8.8,
+    "depth": 18,
+    "entry": {
+      "x": 0,
+      "y": 0,
+      "z": 2.7
+    },
+    "exit": {
+      "x": 0,
+      "y": 0,
+      "z": 0.85,
+      "radius": 1.65
+    },
+    "floor": 0,
+    "ceiling": 3.5,
+    "vaultCeiling": 4.7,
+    "vaultSpring": 3.25,
+    "vaultRise": 1.45,
+    "vaultCentreX": -2.1,
+    "vaultRadiusX": 1.45,
+    "vaultMinZ": 5.75,
+    "vaultMaxZ": 10.45,
+    "leftHallCeiling": 4.7,
+    "shrine": {
+      "x": -2.1,
+      "z": 8.1,
+      "width": 2.4,
+      "depth": 3.5,
+      "top": 1.62
+    },
+    "piers": [
+      [
+        -3.55,
+        5.75
+      ],
+      [
+        -0.65,
+        5.75
+      ],
+      [
+        -3.55,
+        10.45
+      ],
+      [
+        -0.65,
+        10.45
+      ]
+    ],
+    "piersWidth": 0.55,
+    "piersDepth": 0.55,
+    "piersTop": 3.25,
+    "partition": {
+      "x": 2.35,
+      "z": 14.25,
+      "width": 0.16,
+      "depth": 5.8,
+      "top": 2.15
+    },
+    "benches": [
+      [
+        -3.75,
+        13
+      ],
+      [
+        -3.75,
+        15.1
+      ],
+      [
+        3.65,
+        8
+      ],
+      [
+        3.65,
+        10.1
+      ]
+    ],
+    "benchesWidth": 0.64,
+    "benchesDepth": 1.8,
+    "benchesTop": 0.92,
+    "prayerSpots": [
+      {
+        "x": 0.75,
+        "y": 0,
+        "z": 8.4
+      },
+      {
+        "x": 0.75,
+        "y": 0,
+        "z": 12.1
+      }
+    ],
+    "layoutStatus": "Photo-observed elements arranged in an illustrative accessible layout; exact inter-room distances and modern floor plan unavailable"
+  },
+  "retainedProceduralSourceIds": {
+    "walls": [
+      248982985,
+      689369600
+    ],
+    "towers": [
+      1308961025,
+      1308961026
+    ],
+    "roads": [
+      121750328,
+      184143111,
+      1002400007,
+      1002400010
+    ],
+    "roundabouts": [
+      184143114,
+      1502517256
+    ],
+    "sidewalks": [
+      1002265722,
+      1002265724
+    ],
+    "busStop": 8071806903
+  },
+  "limits": [
+    "2021 tree-island photographs are pre-2025 upgrade evidence and do not establish current tree placement",
+    "Transport-terminal photograph WA0044 is not geolocated to the core and is not used to invent a facade",
+    "No assertion of measured contemporary roof height or surveyed public entrance",
+    "No long road/wall duplication in GLB"
+  ]
+}
